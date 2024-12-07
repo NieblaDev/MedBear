@@ -135,6 +135,7 @@ body {
     gap: 40px; /* Espaciado entre perfiles */
     justify-items: center;
     align-items: center;
+    animation: fadeIn 0.5s; /* Animación de entrada */
 }
 
 .profile {
