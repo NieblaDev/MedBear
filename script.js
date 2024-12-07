@@ -12,4 +12,5 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
 document.querySelector('.back-button').addEventListener('click', () => {
     window.location.href = 'perfiles.html';
+    sessionStorage.clear();
 });
