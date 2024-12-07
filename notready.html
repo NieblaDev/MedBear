@@ -23,26 +23,25 @@
 
             .container {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 background-color: #044E54;
-                /* Fondo de la pantalla de carga */
                 height: 99vh;
                 width: 99vw;
                 border-radius: 10px;
-                /* Bordes redondeados */
             }
 
             .back-button {
-                position: absolute;
-                top: 20%;
-                left: 5%;
+                align-self: flex-start;
+                margin-left: 5%;
                 background-color: #3BAFDA;
                 color: white;
                 border: none;
                 padding: 10px 20px;
                 border-radius: 5px;
                 cursor: pointer;
+                margin-bottom: 20px;
                 font-size: clamp(1rem, 2vw, 1.5rem);
             }
 
