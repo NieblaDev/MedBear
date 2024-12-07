@@ -1,10 +1,15 @@
-document.querySelector('.logout-button').addEventListener('click', () => {
-    sessionStorage.clear();
-    window.location.href = 'index.html';
-});
-
+const logoutButton = document.querySelector('.logout-button');
 const userEmailElement = document.getElementById('user-email');
 const userEmail = sessionStorage.getItem('userEmail'); // Obtener el correo del almacenamiento
+
+if (userEmail) {
+    userEmailElement.textContent = userEmail; // Mostrar el correo
+    logoutButton.textContent = 'Cerrar Sesión'; // Cambiar texto del botón
+    
+} else {
+    userEmailElement.textContent = '¿No tienes cuenta vinculada?';
+    logoutButton.textContent = 'Iniciar Sesión';
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const selectedProfile = sessionStorage.getItem('selectedProfile'); // Obtén el perfil guardado
@@ -16,11 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-if (userEmail) {
-    userEmailElement.textContent = userEmail; // Mostrar el correo
-    logoutButton.textContent = 'Cerrar Sesión'; // Cambiar texto del botón
-    
-} else {
-    userEmailElement.textContent = '¿No tienes cuenta vinculada?';
-    logoutButton.textContent = 'Iniciar Sesión';
-}
+logoutButton.addEventListener('click', () => {
+    sessionStorage.clear(); // Limpiar almacenamiento
+    window.location.href = 'index.html'; // Redirigir al login
+});
