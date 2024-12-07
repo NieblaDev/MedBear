@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedBear</title>
+    <icon rel="icon" href="images/logo-icon.png">
+    <link rel="stylesheet" href="loadingstyle.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #cacaca; /* Color del texto */
+            background-color: #cacaca;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #044E54; /* Fondo de la pantalla de carga */
+            height: 99vh;
+            width: 99vw;
+            border-radius: 10px; /* Bordes redondeados */
+        }
+        /* Contenedor de la Pantalla de Carga */
+        .loading-container {
+            text-align: center;
+        }
+        .logo {
+            height: 50vh;
+            margin-bottom: 20px;
+
+        }
+        /* Spinner de Carga */
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #ffffff; /* Color del borde del spinner */
+            border-top: 5px solid #3BAFDA; /* Color de la animación */
+            border-radius: 50%; /* Forma circular */
+            animation: spin 1s linear infinite; /* Animación de giro */
+            margin: 0 auto;
+        }
+
+        /* Texto de Carga */
+        p {
+            margin-top: 20px;
+            font-size: clamp(16px, 2vw, 24px); /* Tamaño dinámico */
+        }
+
+        /* Animación de Giro */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loading-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="MedBear Logo" class="logo">
+            </div>
+            <div class="spinner"></div>
+            <p>Cargando...</p>
+        </div>
+    </div>
+    <script>
+        setTimeout(() => {
+            window.location.href = 'perfiles.html';
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedBear: Login</title>
+    <link rel="icon" href="images/logo-icon.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Panel de Inicio de Sesión -->
+        <div class="login-panel">
+            <button class="back-button">← Volver</button>
+            <h1>Inicia Sesión</h1>
+            <form>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" class="login-button">Iniciar Sesión</button>
+            </form>
+            <p>No tienes cuenta? <a href="#">Crear una.</a></p>
+            <p class="social-login-text">Iniciar sesión con:</p>
+            <div class="social-icons">
+                <img src="images/google-icon.png" alt="Google">
+                <img src="images/facebook-icon.png" alt="Facebook">
+                <img src="images/apple-icon.png" alt="Apple">
+            </div>
+        </div>
+        
+        <!-- Panel del Branding -->
+        <div class="branding-panel">
+            <img src="images/logo.png" alt="MedBear Logo" class="logo">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedBear: Citas</title>
+    <link rel="icon" href="images/logo-icon.png">
+
+    <link rel="stylesheet" href="stylecitas.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <img src="images/logo-horizontal.png" alt="MedBear Logo" class="logo">
+            </div>
+            <nav class="menu">
+                <a href="perfiles.html" class="menu-item">
+                    <i class="icon">🐻</i> Principal
+                </a>
+                <a href="citas.html" class="menu-item active">
+                    <i class="icon">📅</i> Citas Médicas
+                </a>
+                <a href="medicamentos.html" class="menu-item">
+                    <i class="icon">💊</i> Gestión Medicamentos
+                </a>
+                <a href="notready.html" class="menu-item">
+                    <i class="icon">⏰</i> Gestión Alarmas
+                </a>
+                <a href="notready.html" class="menu-item">
+                    <i class="icon">☰</i> Otras Funciones
+                </a>
+            </nav>
+            <div class="user-profile">
+                <p1 id="saludo"></p1>
+                <img id="user-profile-image" alt="Foto de Perfil">
+                <p2 id="user-email"></p2>
+            </div>
+            <button class="logout-button">Cerrar Sesión</button>
+        </aside>
+        
+        <!-- Contenido Principal -->
+        <main class="appointments">
+            <div class="appointments-header">
+                <h2>Próximas Citas</h2>
+                <input type="text" placeholder="Buscar citas..." class="search-bar">
+            </div>
+            <div class="appointments-list">
+                <div class="appointment-card">
+                    <h3>Traumatología</h3>
+                    <p>Clínica Ortopédica, Consulta 3.</p>
+                    <p>Motivo: Dolor rodilla izquierda.</p>
+                    <p>Médico: Carlos Parra.</p>
+                    <p class="date-time">11:30 hrs, 20/09/2025</p>
+                </div>
+                <div class="appointment-card">
+                    <h3>Oftalmología</h3>
+                    <p>Clínica Visión Real.</p>
+                    <p>Motivo: Chequeo anual.</p>
+                    <p>Médico: Martina Soto.</p>
+                    <p class="date-time">09:00 hrs, 23/09/2025</p>
+                </div>
+                <div class="appointment-card">
+                    <h3>Dermatología</h3>
+                    <p>Piel Sana Dermatología.</p>
+                    <p>Motivo: Piel reseca y acné.</p>
+                    <p>Médico: Javiera Riquelme.</p>
+                    <p class="date-time">12:00 hrs, 23/09/2025</p>
+                </div>
+                <div class="appointment-card">
+                    <h3>Medicina General</h3>
+                    <p>Hospital Regional.</p>
+                    <p>Motivo: Exámenes de sangre preventivos.</p>
+                    <p>Médico: Jaime Riquelme.</p>
+                    <p class="date-time">08:00 hrs, 02/10/2025</p>
+                </div>
+            </div>
+            <div class="appointments-actions">
+                <button class="action-button">Agendar Nueva Cita</button>
+                <button class="action-button secondary">Ver Historial</button>
+            </div>
+        </main>
+    </div>
+    <script src="scriptcitas.js"></script>
+</body>
+</html>

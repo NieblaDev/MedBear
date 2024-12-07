@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedBear</title>
+    <icon rel="icon" href="images/logo-icon.png">
+    <link rel="stylesheet" href="loadingstyle.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #cacaca; /* Color del texto */
+            background-color: #cacaca;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #044E54; /* Fondo de la pantalla de carga */
+            height: 99vh;
+            width: 99vw;
+            border-radius: 10px; /* Bordes redondeados */
+        }
+        .image-container {
+            text-align: center;
+        }
+        .not-ready-yet-banner {
+            width: 50vw;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="images/not-ready-yet-banner.png" alt="Not Ready Yet!" class="not-ready-yet-banner">
+        </div>
+    </div>
+    <script>
+        // Espera 1 segundo y redirige a la página anterior
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                window.history.back(); // Vuelve a la página anterior en el historial
+            }, 1000); // 1000 milisegundos = 1 segundo
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+/* Ajuste Global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cacaca;
+    height: 100vh;
+}
+
+/* Contenedor Principal */
+.container {
+    display: flex;
+    width: 99vw; /* Aumenta el ancho */
+    height: 99vh; /* Aumenta el alto */
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Barra Lateral */
+.sidebar {
+    width: 25%;
+    background-color: #044E54;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;  
+}
+
+.logo-section {
+    display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: 150px; /* Ajusta la altura según tu diseño */
+    margin-bottom: 20px; /* Espacio inferior opcional */
+}
+
+.logo-section img {
+    max-width: 80%; /* Asegura que el logo sea responsivo */
+    height: auto; /* Mantiene proporciones */
+}
+
+.menu {
+    width: 80%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px; /* Espacio entre las opciones */
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.menu-item.active {
+    background-color: #3BAFDA;
+}
+
+.menu-item.inactive {
+    filter: brightness(0.5);
+}
+
+.menu-item i{
+    margin-right: 10px;
+}
+
+.menu-item:hover {
+    background-color: rgba(59, 175, 218, 0.5);
+}
+
+.sidebar p1{
+    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.sidebar p2 {
+    text-align: center;
+    font-size: clamp(10px, 2vw, 20px); /* Tamaño dinámico */
+}
+
+.logout-button {
+    background-color: #3BAFDA;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 50%;
+    height: auto;
+}
+
+.logout-button:hover {
+    filter: brightness(1.1);
+    width: 60%;
+}
+
+/* Área de Perfiles */
+.profiles {
+    flex: 1;
+    padding: 40px;
+    background-color: #F4F6F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profiles h2 {
+    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 40px; /* Espaciado entre perfiles */
+    justify-items: center;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile img {
+    width: 65%; /* Tamaño ajustado de la imagen */
+    height: 65%;
+    border-radius: 50%;
+    border: 5px solid #3BAFDA;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.profile img:hover {
+    border-color: #044E54;
+    filter: brightness(1.1);
+    width: 70%; 
+    height: 70%;
+}
+
+.profile p {
+    margin-top: 10px;
+    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+    color: #333;
+}
+
+
+/* Perfil para agregar */
+.add-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px dashed #3BAFDA;
+    height: 80%; /* Mismo ancho que .profile img */
+    aspect-ratio: 1 / 1; /* Garantiza que siempre sea un círculo */
+    border-radius: 50%; /* Mantiene la forma circular */
+    background-color: white;
+    cursor: pointer;
+}
+
+.add-profile:hover {
+    border-color: #044E54;
+    height: 90%;
+}
+
+.add-profile:hover .add-icon {
+    color: #044E54;
+}
+
+.add-icon {
+    font-size: 5rem; /* Tamaño proporcional al contenedor */
+    color: #3BAFDA;
+    line-height: 1; /* Asegura que el "+" esté centrado verticalmente */
+    font-weight: bold; /* Hace el "+" más grueso */
+}
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedBear: Perfiles</title>
+    <link rel="icon" href="images/logo-icon.png">
+
+    <link rel="stylesheet" href="styleperfiles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <img src="images/logo-horizontal.png" alt="MedBear Logo" class="logo">
+            </div>
+            <nav class="menu">
+                <a href="#" class="menu-item active">
+                    <i class="icon">🐻</i> Principal
+                </a>
+                <a href="#" class="menu-item inactive">
+                    <i class="icon">📅</i> Citas Médicas
+                </a>
+                <a href="#" class="menu-item inactive">
+                    <i class="icon">💊</i> Gestión Medicamentos
+                </a>
+                <a href="#" class="menu-item inactive">
+                    <i class="icon">⏰</i> Gestión Alarmas
+                </a>
+                <a href="notready.html" class="menu-item">
+                    <i class="icon">☰</i> Otras Funciones
+                </a>
+            </nav>
+            <p1 id="saludo">¡Hola!</p1>
+            <p2 id="user-email"></p2>
+            <button class="logout-button">Iniciar Sesión</button>
+        </aside>
+        
+        <!-- Área de Perfiles -->
+        <main class="profiles">
+            <h2>ELEGIR PERFIL:</h2>
+            <div class="profiles-grid">
+                <div class="profile" onclick="selectProfile('Johnny')">
+                    <img src="images/johnny.webp" alt="Johnny">
+                    <p>Johnny</p>
+                </div>
+                <div class="profile" onclick="selectProfile('Teresa')">
+                    <img src="images/teresa.webp" alt="Teresa">
+                    <p>Teresa</p>
+                </div>
+                <div class="profile" onclick="selectProfile('Alex')">
+                    <img src="images/alex.webp" alt="Alex">
+                    <p>Alex</p>
+                </div>
+                <div class="profile" onclick="selectProfile('Lana')">
+                    <img src="images/lana.webp" alt="Lana">
+                    <p>Lana</p>
+                </div>
+                <div class="profile" onclick="selectProfile('Jordi')">
+                    <img src="images/jordi.webp" alt="Jordi">
+                    <p>Jordi</p>
+                </div>
+                <div class="profile add-profile">
+                    <div class="add-icon">+</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="scriptperfiles.js"></script>
+</body>
+</html>

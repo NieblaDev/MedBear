@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedBear: Medicamentos</title>
+    <link rel="icon" href="images/logo-icon.png">
+
+    <link rel="stylesheet" href="stylemedicamentos.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <div class="logo-section">
+                <img src="images/logo-horizontal.png" alt="MedBear Logo" class="logo">
+            </div>
+            <nav class="menu">
+                <a href="perfiles.html" class="menu-item">
+                    <i class="icon">🐻</i> Principal
+                </a>
+                <a href="citas.html" class="menu-item">
+                    <i class="icon">📅</i> Citas Médicas
+                </a>
+                <a href="medicamentos.html" class="menu-item active">
+                    <i class="icon">💊</i> Gestión Medicamentos
+                </a>
+                <a href="notready.html" class="menu-item">
+                    <i class="icon">⏰</i> Gestión Alarmas
+                </a>
+                <a href="notready.html" class="menu-item">
+                    <i class="icon">☰</i> Otras Funciones
+                </a>
+            </nav>
+            <div class="user-profile">
+                <p1 id="saludo"></p1>
+                <img id="user-profile-image" alt="Foto de Perfil">
+                <p2 id="user-email"></p2>
+            </div>
+            <button class="logout-button">Cerrar Sesión</button>
+        </aside>
+        
+        <!-- Contenido Principal -->
+        <main class="medications">
+            <div class="medications-header">
+                <h2>Próximos Medicamentos</h2>
+                <input type="text" placeholder="Buscar medicamentos..." class="search-bar">
+            </div>
+            <div class="medications-list">
+                <div class="medication-card">
+                    <h3>Ibuprofeno 400mg</h3>
+                    <p>Dosis: 1 comprimido cada 8 horas</p>
+                    <p>Fecha de inicio: 20/09/2025</p>
+                    <p>Duración: 5 días</p>
+                    <p class="next-dose">⏳ Próxima dosis en 30 minutos.</p>
+                </div>
+                <div class="medication-card">
+                    <h3>Loratadina 10mg</h3>
+                    <p>Dosis: 1 comprimido al día</p>
+                    <p>Fecha de inicio: 23/09/2025</p>
+                    <p>Duración: 14 días</p>
+                    <p class="next-dose">⏳ Próxima dosis en 1 hora y 43 minutos.</p>
+                </div>
+                <div class="medication-card">
+                    <h3>Amoxicilina 500mg</h3>
+                    <p>Dosis: 1 cápsula cada 12 horas</p>
+                    <p>Fecha de inicio: 25/09/2025</p>
+                    <p>Duración: 7 días</p>
+                    <p class="next-dose">⏳ Próxima dosis en 2 horas y 11 minutos.</p>
+                </div>
+                <div class="medication-card">
+                    <h3>Vitamina D 1000 UI</h3>
+                    <p>Dosis: 1 comprimido al día</p>
+                    <p>Fecha de inicio: 23/09/2025</p>
+                    <p>Duración: Indefinida</p>
+                    <p class="next-dose">⏳ Próxima dosis en 11 horas y 2 minutos.</p>
+                </div>
+            </div>
+            <div class="medications-actions">
+                <button class="action-button">Añadir Medicamento</button>
+                <button class="action-button secondary">Ver Mis Medicamentos</button>
+            </div>
+        </main>
+    </div>
+    <script src="scriptmedicamentos.js"></script>
+</body>
+</html>

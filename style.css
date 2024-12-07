@@ -1,0 +1,117 @@
+/* Ajuste Global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cacaca;
+    height: 100vh;
+}
+
+/* Contenedor Principal */
+.container {
+    display: flex;
+    width: 99vw; /* Aumenta el ancho */
+    height: 99vh; /* Aumenta el alto */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Panel de Login */
+.login-panel {
+    flex: 1;
+    padding: 40px; /* Aumenta el padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-button {
+    align-self: flex-start;
+    background-color: #3BAFDA;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+}
+
+.back-button:hover {
+    filter: brightness(1.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: clamp(20px, 2vw, 30px); /* Tamaño dinámico */
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+    padding: 15px; /* Aumenta el padding */
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+.login-button {
+    width: 100%;
+    background-color: #3BAFDA;
+    color: white;
+    padding: 15px; /* Aumenta el padding */
+    border: none;
+    border-radius: 5px;
+    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+    cursor: pointer;
+}
+
+.login-button:hover {
+    filter: brightness(1.1);
+}
+
+.social-login-text {
+    margin: 30px 0 15px;
+    color: #666;
+    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+}
+
+.social-icons img {
+    width: 40px; /* Aumenta el tamaño */
+    height: 40px;
+    margin: 0 10px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.social-icons img:hover {
+    border: 1px solid #000000;
+}
+
+/* Panel de Branding */
+.branding-panel {
+    flex: 1;
+    background-color: #044E54;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    height: 75%;/*  Aumenta el tamaño */
+    width: auto; 
+    margin-bottom: 30px;
+}
