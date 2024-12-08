@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedBear: Citas</title>
     <link rel="icon" href="images/logo-icon.png">
 
-    <link rel="stylesheet" href="stylecitas.css">
+    <link rel="stylesheet" href="citas.css">
     <link rel="stylesheet" href="animations.css">
 
 </head>
+
 <body>
     <div class="container">
         <!-- Barra Lateral -->
@@ -41,7 +43,7 @@
             </div>
             <button class="logout-button">Cerrar Sesión</button>
         </aside>
-        
+
         <!-- Contenido Principal -->
         <main class="appointments">
             <div class="appointments-header">
@@ -49,41 +51,108 @@
                 <input type="text" placeholder="Buscar citas..." class="search-bar">
             </div>
             <div class="appointments-list">
-                <div class="appointment-card">
+                <div class="appointment-card" onclick="openModal(this)">
                     <h3>Traumatología</h3>
-                    <p>Clínica Ortopédica, Consulta 3.</p>
-                    <p>Motivo: Dolor rodilla izquierda.</p>
-                    <p>Médico: Carlos Parra.</p>
-                    <p class="date-time">11:30 hrs, 20/09/2025</p>
+                    <p1>Clínica Ortopédica, Consulta 3.</p1><p>
+                    <p2>Dolor rodilla izquierda.</p2><p>
+                    <p3>Dr. Carlos Parra.</p3><p>
+                    <p4>11:30 hrs</p4>
+                    <p5>20/09/2025</p5>
                 </div>
-                <div class="appointment-card">
-                    <h3>Oftalmología</h3>
-                    <p>Clínica Visión Real.</p>
-                    <p>Motivo: Chequeo anual.</p>
-                    <p>Médico: Martina Soto.</p>
-                    <p class="date-time">09:00 hrs, 23/09/2025</p>
+                <div class="appointment-card" onclick="openModal(this)">
+                    <h3>Cardiología</h3>
+                    <p1>Clínica Cardiovascular, Consulta 1.</p1><p>
+                    <p2>Control de Presión Arterial.</p2><p>
+                    <p3>Dra. María Pérez.</p3><p>
+                    <p4>09:00 hrs</p4>
+                    <p5>21/09/2025</p5>
                 </div>
-                <div class="appointment-card">
-                    <h3>Dermatología</h3>
-                    <p>Piel Sana Dermatología.</p>
-                    <p>Motivo: Piel reseca y acné.</p>
-                    <p>Médico: Javiera Riquelme.</p>
-                    <p class="date-time">12:00 hrs, 23/09/2025</p>
+                <div class="appointment-card" onclick="openModal(this)">
+                    <h3>Neurología</h3>
+                    <p1>Clínica Neurológica, Consulta 2.</p1><p>
+                    <p2>Control de Epilepsia.</p2><p>
+                    <p3>Dr. Juan Soto.</p3><p>
+                    <p4>15:00 hrs</p4>
+                    <p5>29/09/2025</p5>
                 </div>
-                <div class="appointment-card">
-                    <h3>Medicina General</h3>
-                    <p>Hospital Regional.</p>
-                    <p>Motivo: Exámenes de sangre preventivos.</p>
-                    <p>Médico: Jaime Riquelme.</p>
-                    <p class="date-time">08:00 hrs, 02/10/2025</p>
+                <div class="appointment-card" onclick="openModal(this)">
+                    <h3>Psiquiatría</h3>
+                    <p1>Clínica Psicológica, Consulta 4.</p1><p>
+                    <p2>Control de Depresión.</p2><p>
+                    <p3>Dra. Ana López.</p3><p>
+                    <p4>10:30 hrs</p4>
+                    <p5>13/10/2025<p5>
                 </div>
             </div>
             <div class="appointments-actions">
-                <button class="action-button">Agendar Nueva Cita</button>
-                <button class="action-button secondary">Ver Historial</button>
+                <button class="action-button " onclick="window.location.href = 'notready.html'">Agendar Nueva Cita</button>
+                <button class="action-button secondary" onclick="window.location.href = 'notready.html'">Ver Historial</button>
             </div>
+            <!-- Modal -->
+            <div id="modal" class="modal hidden">
+                <div class="modal-content">
+                    <h3 id="modal-header"> Información de consulta:</h3>
+                    <table class="details-table">
+                        <tbody>
+                            <tr>
+                                <th>ID de Consulta</th>
+                                <td contenteditable="false"></td>
+                            </tr>
+                            <tr>
+                                <th>Fecha</th>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <th>Hora</th>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <th>Lugar</th>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <th>Médico</th>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <th>Especialidad</th>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <th>Tipo de Consulta</th>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <th>Motivo</th>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <th>Diagnóstico</th>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <th>Interconsulta</th>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <th>Anotaciones Personales</th>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <th>Imágenes Adjuntas</th>
+                                <td contenteditable="true"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="modal-actions">
+                        <button class="action-button secondary" onclick="closeModal()">Cerrar</button>
+                        <button class="action-button" onclick="saveTable()">Guadar Cambios</button>
+                        <button class="action-button" onclick="archiveTable()">Archivar en Historial</button>
+                    </div>
+                </div>
         </main>
     </div>
-    <script src="scriptcitas.js"></script>
+    <script src="citas.js"></script>
 </body>
+
 </html>

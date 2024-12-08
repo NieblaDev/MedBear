@@ -11,13 +11,17 @@ if (userEmail) {
     logoutButton.textContent = 'Iniciar Sesión';
 }
 
-logoutButton.addEventListener('click', () => {
-    sessionStorage.clear(); // Limpiar almacenamiento
-    window.location.href = 'index.html'; // Redirigir al login
+document.addEventListener('DOMContentLoaded', () => {
+    const selectedProfile = sessionStorage.getItem('selectedProfile'); // Obtén el perfil guardado
+    if (selectedProfile) {
+        document.getElementById('saludo').textContent = `¡Hola, ${selectedProfile}!`; // Actualiza el saludo
+        document.getElementById('user-profile-image').src = `images/${selectedProfile.toLowerCase()}.webp`; // Actualiza la imagen
+    } else {
+        document.getElementById('saludo').textContent = '¡Hola!'; // Mensaje predeterminado si no hay perfil
+    }
 });
 
-
-function selectProfile(profileName) {
-    sessionStorage.setItem('selectedProfile', profileName);
-    window.location.href = 'citas.html';
-}
+logoutButton.addEventListener('click', () => {
+    sessionStorage.clear(); // Limpiar almacenamiento
+    window.location.href = 'login.html'; // Redirigir al login
+});

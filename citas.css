@@ -118,18 +118,18 @@ body {
 
 .logout-button:hover {
     filter: brightness(1.1);
-    width: 60%;
+    animation: scale-up-center 0.3s;
 }
 
 /* Contenido Principal */
-.medications {
+.appointments {
     flex: 1;
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.medications-header {
+.appointments-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -144,7 +144,79 @@ body {
     width: 70%;
 }
 
-.medications-actions {
+/* Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    animation: fadeIn 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Cerrar botón */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Tabla */
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.details-table th, .details-table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+
+.details-table th {
+    background-color: #f4f4f4;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Clase para mostrar el modal */
+.modal.show {
+    display: flex; /* Mostrar modal */
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.appointments-actions {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
@@ -163,13 +235,14 @@ body {
 }
 .action-button:hover {
     filter: brightness(1.1);
+    animation: scale-up-center 0.3s;
 }
 
 .action-button.secondary {
     background-color: #044E54;
 }
 
-.medications-list {
+.appointments-list {
     flex: 1;
     overflow-y: auto;
     display: flex;
@@ -180,15 +253,21 @@ body {
     animation: fadeIn 0.5s;
 }
 
-.medication-card {
+.appointment-card {
     background-color: #3BAFDA;
     color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
-.next-dose {
+.appointment-card:hover {
+    filter: brightness(1.05);
+    animation: scale-up-center 0.5s;
+}
+
+.date-time {
     font-weight: bold;
     margin-top: 10px;
 }

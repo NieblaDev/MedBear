@@ -32,6 +32,7 @@ body {
 
 .back-button {
     align-self: flex-start;
+    margin-left: 5%;
     background-color: #3BAFDA;
     color: white;
     border: none;
@@ -44,12 +45,15 @@ body {
 
 .back-button:hover {
     filter: brightness(1.1);
+    animation: scale-up-center 0.3s;
 }
 
 h1 {
     color: #333;
     margin-bottom: 30px;
     font-size: clamp(20px, 2vw, 30px); /* Tamaño dinámico */
+    text-align: center; /* Centrar el texto */
+    width: 100%; /* Asegurar que ocupe todo el ancho del contenedor */
 }
 
 .input-group {
@@ -70,6 +74,7 @@ input {
     background-color: #3BAFDA;
     color: white;
     padding: 15px; /* Aumenta el padding */
+    align-self: center;
     border: none;
     border-radius: 5px;
     font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
@@ -78,6 +83,7 @@ input {
 
 .login-button:hover {
     filter: brightness(1.1);
+    animation: scale-up-center 0.3s;
 }
 
 .social-login-text {
@@ -95,7 +101,7 @@ input {
     cursor: pointer;
 }
 .social-icons img:hover {
-    border: 1px solid #000000;
+    animation: scale-up-center 0.3s;
 }
 
 /* Panel de Branding */

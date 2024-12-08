@@ -12,8 +12,8 @@ body {
 /* Contenedor Principal */
 .container {
     display: flex;
-    width: 99vw; /* Aumenta el ancho */
-    height: 99vh; /* Aumenta el alto */
+    width: 99vw;
+    height: 99vh;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
@@ -29,7 +29,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;  
+    padding: 20px;
 }
 
 .logo-section {
@@ -67,30 +67,40 @@ body {
     width: 100%;
 }
 
-.menu-item.active {
-    background-color: #3BAFDA;
-}
-
-.menu-item.inactive {
-    filter: brightness(0.5);
-}
-
 .menu-item i{
     margin-right: 10px;
 }
 
+.menu-item.active {
+    background-color: #3BAFDA;
+}
 .menu-item:hover {
     background-color: rgba(59, 175, 218, 0.5);
 }
 
-.sidebar p1{
+.sidebar p1 {
     font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
     font-weight: bold;
-    margin-bottom: 10px;
+    color: white;
 }
 .sidebar p2 {
     text-align: center;
     font-size: clamp(10px, 2vw, 20px); /* Tamaño dinámico */
+}
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-profile img {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    object-fit: cover;
+    animation: fadeIn 0.5s;
 }
 
 .logout-button {
@@ -108,95 +118,83 @@ body {
 
 .logout-button:hover {
     filter: brightness(1.1);
-    width: 60%;
+    animation: scale-up-center 0.3s;
 }
 
-/* Área de Perfiles */
-.profiles {
+/* Contenido Principal */
+.medications {
     flex: 1;
-    padding: 40px;
-    background-color: #F4F6F8;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.profiles h2 {
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
-    color: #333;
+.medications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
-    text-align: center;
-}
-
-.profiles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 40px; /* Espaciado entre perfiles */
-    justify-items: center;
-    align-items: center;
-    animation: fadeIn 0.5s; /* Animación de entrada */
-}
-
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.profile img {
-    width: 65%; /* Tamaño ajustado de la imagen */
-    height: 65%;
-    border-radius: 50%;
-    border: 5px solid #3BAFDA;
-    object-fit: cover;
-    cursor: pointer;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-.profile img:hover {
-    border-color: #044E54;
-    filter: brightness(1.1);
-    width: 70%; 
-    height: 70%;
-}
-
-.profile p {
-    margin-top: 10px;
     font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
-    color: #333;
 }
 
+.search-bar {
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    width: 70%;
+}
 
-/* Perfil para agregar */
-.add-profile {
+.medications-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.action-button {
+    flex: 1;
+    background-color: #3BAFDA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: clamp(12px, 2vw, 22px); /* Tamaño dinámico */
+    cursor: pointer;
+    text-align: center;
+}
+.action-button:hover {
+    filter: brightness(1.1);
+    animation: scale-up-center 0.3s;
+}
+
+.action-button.secondary {
+    background-color: #044E54;
+}
+
+.medications-list {
+    flex: 1;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 5px dashed #3BAFDA;
-    height: 80%; /* Mismo ancho que .profile img */
-    aspect-ratio: 1 / 1; /* Garantiza que siempre sea un círculo */
-    border-radius: 50%; /* Mantiene la forma circular */
-    background-color: white;
-    cursor: pointer;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s;
 }
 
-.add-profile:hover {
-    border-color: #044E54;
-    height: 90%;
+.medication-card {
+    background-color: #3BAFDA;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.add-profile:hover .add-icon {
-    color: #044E54;
+.medication-card:hover {
+    filter: brightness(1.1);
+    animation: scale-up-center 0.3s;
 }
 
-.add-icon {
-    font-size: 5rem; /* Tamaño proporcional al contenedor */
-    color: #3BAFDA;
-    line-height: 1; /* Asegura que el "+" esté centrado verticalmente */
-    font-weight: bold; /* Hace el "+" más grueso */
+.next-dose {
+    font-weight: bold;
+    margin-top: 10px;
 }
-
-

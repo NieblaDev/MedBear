@@ -1,42 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MedBear: Login</title>
-    <link rel="icon" href="images/logo-icon.png">
+    <title>MedBear</title>
+    <icon rel="icon" href="images/logo-icon.png">
 
-    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="loadingstyle.css">
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                color: #cacaca;
+                /* Color del texto */
+                background-color: #cacaca;
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #044E54;
+                /* Fondo de la pantalla de carga */
+                height: 99vh;
+                width: 99vw;
+                border-radius: 10px;
+                /* Bordes redondeados */
+            }
+
+            /* Contenedor de la Pantalla de Carga */
+            .loading-container {
+                text-align: center;
+            }
+
+            .logo {
+                height: 50vh;
+                margin-bottom: 20px;
+
+            }
+
+            /* Spinner de Carga */
+            .spinner {
+                width: 50px;
+                height: 50px;
+                border: 5px solid #ffffff;
+                /* Color del borde del spinner */
+                border-top: 5px solid #3BAFDA;
+                /* Color de la animación */
+                border-radius: 50%;
+                /* Forma circular */
+                animation: spin 1s linear infinite;
+                /* Animación de giro */
+                margin: 0 auto;
+            }
+
+            /* Texto de Carga */
+            p {
+                margin-top: 20px;
+                font-size: clamp(16px, 2vw, 24px);
+                /* Tamaño dinámico */
+            }
+
+            /* Animación de Giro */
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
 </head>
+
 <body>
     <div class="container">
-        <!-- Panel de Inicio de Sesión -->
-        <div class="login-panel">
-            <button class="back-button">← Volver</button>
-            <h1>Inicia Sesión</h1>
-            <form>
-                <div class="input-group">
-                    <input type="email" id="email" placeholder="Email" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="password" placeholder="Contraseña" required>
-                </div>
-                <button type="submit" class="login-button">Iniciar Sesión</button>
-            </form>
-            <p>No tienes cuenta? <a href="#">Crear una.</a></p>
-            <p class="social-login-text">Iniciar sesión con:</p>
-            <div class="social-icons">
-                <img src="images/google-icon.png" alt="Google">
-                <img src="images/facebook-icon.png" alt="Facebook">
-                <img src="images/apple-icon.png" alt="Apple">
+        <div class="loading-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="MedBear Logo" class="logo">
             </div>
-        </div>
-        
-        <!-- Panel del Branding -->
-        <div class="branding-panel">
-            <img src="images/logo.png" alt="MedBear Logo" class="logo">
+            <div class="spinner"></div>
+            <p>A page by @NieblaDev</p>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        setTimeout(() => {
+            window.location.href = 'perfiles.html';
+        }, 3000);
+    </script>
 </body>
+
 </html>
