@@ -12,10 +12,9 @@ body {
 /* Contenedor Principal */
 .container {
     display: flex;
-    width: 99vw;
-    height: 99vh;
+    width: 100vw;
+    height: 100vh;
     background-color: white;
-    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
