@@ -179,7 +179,7 @@ body {
     color: #333;
 }
 
-/*desktop small*/
+/* desktop small
 @media (max-width: 1200px) and (min-width: 993px) {
     .sidebar {
         width: 30%;
@@ -194,7 +194,7 @@ body {
     }
 }
 
-/*tablet*/
+/*tablet
 @media (max-width: 992px) and (min-width: 577px) {
     .sidebar {
         width: 30%;
@@ -207,9 +207,9 @@ body {
         height: 12rem;
         font-size: 3.5rem;
     }
-}
+} */
 /*mobile*/
-@media (max-width: 576px) {
+@media (max-width: 600px) {
     .container {
         flex-direction: column;
     }
