@@ -32,31 +32,32 @@
       opacity: 1;
     }
 }
-  
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes scale-up-center {
+@keyframes scale-up-center95 {
     0% {
       transform: scale(0.95);
     }
     100% {
       transform: scale(1.0);
     }
-  }
+}
+
+@keyframes scale-up-center90{
+    0% {
+      transform: scale(0.90);
+    }
+    100% {
+      transform: scale(1.0);
+    }
+}
+
+@keyframes bounce-subtle {
+    0%, 100% {
+        transform: translateY(0); /* Posición inicial y final */
+    }
+    50% {
+        transform: translateY(-5px); /* Rebote hacia arriba */
+    }
+}
+  
   

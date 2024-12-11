@@ -48,10 +48,10 @@ body {
     font-size: clamp(1rem, 2vw, 2rem);
     padding: 1rem 2rem;
     border-radius: 0.5rem;
-    color: #cacaca;
+    color: white;
+    animation: bounce-subtle 0.7s infinite;
 }
 
 .start-button:hover {
-    color: white;
     filter: brightness(1.1);
 }
