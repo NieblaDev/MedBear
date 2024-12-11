@@ -163,7 +163,7 @@ body {
 }
 
 /*desktop small*/
-@media (width < 1200px) {
+@media (max-width: 1200px) and (min-width: 993px) {
     .sidebar {
         width: 30%;
     }
@@ -178,7 +178,7 @@ body {
 }
 
 /*tablet*/
-@media (width < 992px) {
+@media (max-width: 992px) and (min-width: 577px) {
     .sidebar {
         width: 30%;
     }
@@ -192,7 +192,7 @@ body {
     }
 }
 /*mobile*/
-@media (width < 576px) {
+@media (max-width: 576px) {
     .container {
         flex-direction: column;
     }
@@ -237,7 +237,7 @@ body {
         filter: brightness(1.1);
         animation: scale-up-center 0.3s;
     }
-    
+
     .sidebar {
         position: fixed;
         top: 0;
