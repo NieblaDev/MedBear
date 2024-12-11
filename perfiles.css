@@ -1,69 +1,65 @@
-/* Ajuste Global */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #cacaca;
-    height: 100vh;
 }
 
-/* Contenedor Principal */
 .container {
     display: flex;
-    width: 100vw; /* Aumenta el ancho */
-    height: 100vh; /* Aumenta el alto */
+    width: 100vw;
+    height: 100vh;
     background-color: white;
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Barra Lateral */
+.mobile-header{
+    display: none;
+}
+
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
     width: 25%;
     background-color: #044E54;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;  
 }
 
 .logo-section {
-    display: flex; /* Activa flexbox */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    height: 150px; /* Ajusta la altura según tu diseño */
-    margin-bottom: 20px; /* Espacio inferior opcional */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .logo-section img {
-    max-width: 80%; /* Asegura que el logo sea responsivo */
-    height: auto; /* Mantiene proporciones */
+    max-width: 80%;
+    height: auto; 
 }
 
 .menu {
-    width: 80%;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 10px; /* Espacio entre las opciones */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
 }
 
 .menu-item {
     display: flex;
     align-items: center;
     text-decoration: none;
+    width: 80%;
+    border-radius: 0.5rem;
+    padding: 1rem;
     color: white;
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
-    padding: 10px 15px;
-    border-radius: 5px;
-    width: 100%;
+    font-size: clamp(1rem, 2vw, 1.5rem); 
 }
 
 .menu-item.active {
@@ -71,130 +67,216 @@ body {
 }
 
 .menu-item.inactive {
-    filter: brightness(0.5);
-}
-
-.menu-item i{
-    margin-right: 10px;
+    filter: brightness(0.5)
 }
 
 .menu-item:hover {
-    background-color: rgba(59, 175, 218, 0.5);
-}
-
-.sidebar p1{
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.sidebar p2 {
-    text-align: center;
-    font-size: clamp(10px, 2vw, 20px); /* Tamaño dinámico */
-}
-
-.logout-button {
     background-color: #3BAFDA;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    width: 50%;
-    height: auto;
 }
 
-.logout-button:hover {
+.menu-item i {
+    margin-right: 1ch;
+}
+
+.sidebar-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Tamaño dinámico */
+}
+
+.login-button {
+    width: 80%;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #3BAFDA;
+    color: white;
+    border: none;
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Tamaño dinámico */
+    cursor: pointer;
+}
+
+.login-button:hover {
     filter: brightness(1.1);
     animation: scale-up-center 0.3s;
 }
 
-/* Área de Perfiles */
 .profiles {
     flex: 1;
-    padding: 40px;
-    background-color: #F4F6F8;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #F4F6F8;
 }
 
-.profiles h2 {
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+.profiles-header {
+    font-size: clamp(1.5rem, 2vw, 2rem);
     color: #333;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 .profiles-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 40px; /* Espaciado entre perfiles */
     justify-items: center;
     align-items: center;
-    animation: fadeIn 0.5s; /* Animación de entrada */
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(15rem, 1fr));
 }
 
-.profile {
+.profile, 
+.add-profile {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    max-width: 15rem;
 }
 
-.profile img {
-    width: 65%; /* Tamaño ajustado de la imagen */
-    height: 65%;
-    border-radius: 50%;
-    border: 5px solid #3BAFDA;
+.profile img,
+.add-button{
+    width: 15rem;
+    height: 15rem;
     object-fit: cover;
+    text-align: center;
+    border-radius: 50%;
+    color:#3BAFDA;
+    border: 5px solid #3BAFDA;
+    font-size: 5rem;
     cursor: pointer;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.profile img:hover {
+.profile img:hover, .add-button:hover {
     border-color: #044E54;
+    color:#044E54;
     filter: brightness(1.1);
     animation: scale-up-center 0.3s;
 }
 
-.profile p {
-    margin-top: 10px;
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+.profile p,
+.add-profile p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
     color: #333;
 }
 
-
-/* Perfil para agregar */
-.add-profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 5px dashed #3BAFDA;
-    height: 80%; /* Mismo ancho que .profile img */
-    aspect-ratio: 1 / 1; /* Garantiza que siempre sea un círculo */
-    border-radius: 50%; /* Mantiene la forma circular */
-    background-color: white;
-    cursor: pointer;
+/*desktop small*/
+@media (width < 1200px) {
+    .sidebar {
+        width: 30%;
+    }
+    .profiles-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .profile img, .add-button {
+        width: 13rem;
+        height: 13rem;
+        font-size: 3.5rem;
+    }
 }
 
-.add-profile:hover {
-    border-color: #044E54;
-    height: 90%;
+/*tablet*/
+@media (width < 992px) {
+    .sidebar {
+        width: 30%;
+    }
+    .profiles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .profile img, .add-button {
+        width: 12rem;
+        height: 12rem;
+        font-size: 3.5rem;
+    }
 }
+/*mobile*/
+@media (width < 576px) {
+    .container {
+        flex-direction: column;
+    }
+    .mobile-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #044E54;
+        color: white;
+        height: 10vh;
+    }
+    .mobile-menu-button {
+        color : white;
+        background-color: #044E54;
+        border: none;
+        padding: 0.5rem;
+        cursor: pointer;
+        margin-left: 1rem;
+    }
+    .mobile-menu-button:hover {
+        filter: brightness(1.1);
+    }
+    .logo-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+    .mobile-login-button {
+        border: none;
+        background-color: #3BAFDA;
+        color: white;
+        padding: 0.3rem 0.5rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        width: 5rem;
+        margin-right: 1rem;
+    }
 
-.add-profile:hover .add-icon {
-    color: #044E54;
+    .mobile-login-button:hover {
+        filter: brightness(1.1);
+        animation: scale-up-center 0.3s;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 70%;
+        transition: left 0.3s ease-in-out;
+        z-index: 10;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9;
+
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    .profiles {
+        height: 90vh;
+    }
+    .profiles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .profile img, .add-button {
+        width: 7rem;
+        height: 7rem;
+        font-size: 2.5rem;
+    }
 }
-
-.add-icon {
-    font-size: 5rem; /* Tamaño proporcional al contenedor */
-    color: #3BAFDA;
-    line-height: 1; /* Asegura que el "+" esté centrado verticalmente */
-    font-weight: bold; /* Hace el "+" más grueso */
-}
-
-

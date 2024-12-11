@@ -5,101 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MedBear</title>
-    <icon rel="icon" href="images/logo-icon.png">
-
-        <link rel="stylesheet" href="loadingstyle.css">
-        <style>
-            body {
-                margin: 0;
-                font-family: Arial, sans-serif;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                background-color: #044E54;
-                height: 100vh;
-                width: 100vw;
-            }
-            
-            .container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                animation: slide-in-fwd-center 1s;
-            }
-
-            .logo {
-                height: 50vh;
-                margin-bottom: 5%;
-            }
-            
-            .dev-info {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: clamp(16px, 2vw, 24px);
-                color: #cacaca;
-                cursor: pointer ;
-            }
-            
-            .dev-info:hover{
-                color:#fff;
-                animation: bounce 1s linear infinite;
-            }
-            
-            .devLogo {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                margin-right: 10px;
-                margin-left: 10px;
-            }
-
-            .start-button {
-                padding: 10px 20px;
-                font-size: clamp(20px, 2vw, 30px);
-                background-color: #3BAFDA;
-                color: #fff;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                animation: bounce 1s linear infinite;
-                margin-top: 10%;
-                margin-bottom: 30%;
-            }
-
-
-            @keyframes slide-in-fwd-center {
-                0% {
-                    transform: scale(0.5);
-                    opacity: 0;
-                }
-
-                100% {
-                    transform: scale(1);
-                    opacity: 1;
-                }
-            }
-
-            @keyframes bounce {
-
-                0%,25%,50%,80%,100% {
-                    transform: translateY(0);
-                }
-
-                40% {
-                    transform: translateY(-5px);
-                    /* Altura del rebote */
-                }
-
-                60% {
-                    transform: translateY(+3px);
-                    /* Rebote más pequeño */
-                }
-            }
-
-        </style>
+    <link rel="icon" href="images/logo-icon.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
 </head>
 
 <body>
@@ -108,7 +17,7 @@
         <button class="start-button" onclick="startMedbear()">Comenzar</button>
         <p class="dev-info" onclick="window.location.href='https://github.com/NieblaDev'">
             A page by
-            <img src="images/dev-logo.jpg" alt="Developer Logo" class="devLogo">
+            <img src="images/dev-logo.jpg" alt="Developer Logo" class="dev-logo">
             @NieblaDev
         </p>
     </div>
