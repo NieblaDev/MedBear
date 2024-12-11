@@ -18,6 +18,22 @@ body {
     display: none;
 }
 
+.logo-mobile{
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+.mobile-menu-button {
+    display: none;
+}
+
+.mobile-login-button {
+    display: none;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;
