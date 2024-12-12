@@ -1,146 +1,147 @@
-/* Ajuste Global */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #cacaca;
-    height: 100vh;
 }
 
-/* Contenedor Principal */
 .container {
     display: flex;
     width: 100vw;
     height: 100vh;
     background-color: white;
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Barra Lateral */
+.mobile-header{
+    display: none;
+}
+
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
     width: 25%;
     background-color: #044E54;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    overflow-y: auto;
 }
 
 .logo-section {
-    display: flex; /* Activa flexbox */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    height: 150px; /* Ajusta la altura según tu diseño */
-    margin-bottom: 20px; /* Espacio inferior opcional */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .logo-section img {
-    max-width: 80%; /* Asegura que el logo sea responsivo */
-    height: auto; /* Mantiene proporciones */
+    max-width: 80%;
+    height: auto; 
 }
 
 .menu {
-    width: 80%;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 10px; /* Espacio entre las opciones */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
 }
 
 .menu-item {
     display: flex;
     align-items: center;
     text-decoration: none;
+    width: 80%;
+    border-radius: 0.5rem;
+    padding: 1rem;
     color: white;
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
-    padding: 10px 15px;
-    border-radius: 5px;
-    width: 100%;
-}
-
-.menu-item i{
-    margin-right: 10px;
+    font-size: clamp(1rem, 2vw, 1.5rem); 
 }
 
 .menu-item.active {
     background-color: #3BAFDA;
 }
+
+.menu-item.inactive {
+    filter: brightness(0.5);
+}
+
 .menu-item:hover {
-    background-color: rgba(59, 175, 218, 0.5);
+    background-color: #3BAFDA;
+}
+
+.menu-item i {
+    margin-right: 1ch;
 }
 
 .sidebar p1 {
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: bold;
     color: white;
 }
+
 .sidebar p2 {
     text-align: center;
-    font-size: clamp(10px, 2vw, 20px); /* Tamaño dinámico */
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
 }
+
 .user-profile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .user-profile img {
     width: 50%;
     height: auto;
     border-radius: 50%;
-    margin-top: 20px;
     object-fit: cover;
-    animation: fadeIn 0.5s;
 }
 
-.logout-button {
+.login-button {
+    width: 80%;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
     background-color: #3BAFDA;
-    border: none;
     color: white;
-    padding: 10px 20px;
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
-    border-radius: 5px;
+    border: none;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     cursor: pointer;
-    margin-top: 20px;
-    width: 50%;
-    height: auto;
 }
 
-.logout-button:hover {
+.login-button:hover {
     filter: brightness(1.1);
-    animation: scale-up-center 0.3s;
+    animation: scale-up-center90 0.3s;
 }
 
-/* Contenido Principal */
 .medications {
     flex: 1;
-    padding: 20px;
     display: flex;
     flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .medications-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .search-bar {
-    padding: 10px;
-    border: 1px solid #CCC;
-    border-radius: 5px;
-    width: 70%;
+    width: 50%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .medications-actions {
@@ -151,18 +152,19 @@ body {
 
 .action-button {
     flex: 1;
+    text-align: center;
     background-color: #3BAFDA;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 20px;
-    font-size: clamp(12px, 2vw, 22px); /* Tamaño dinámico */
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     cursor: pointer;
-    text-align: center;
 }
+
 .action-button:hover {
     filter: brightness(1.1);
-    animation: scale-up-center 0.3s;
+    animation: scale-up-center90 0.3s;
 }
 
 .action-button.secondary {
@@ -174,26 +176,121 @@ body {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    animation: fadeIn 0.5s;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    animation: fadeIn 0.3s;
 }
 
 .medication-card {
     background-color: #3BAFDA;
     color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 
 .medication-card:hover {
     filter: brightness(1.1);
-    animation: scale-up-center 0.3s;
+    animation: scale-up-center95 0.3s;
 }
 
 .next-dose {
     font-weight: bold;
-    margin-top: 10px;
+}
+
+
+/*mobile*/
+@media (width < 576px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .mobile-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #044E54;
+        color: white;
+        height: 10vh;
+    }
+    
+    .mobile-menu-button {
+        color : white;
+        background-color: #044E54;
+        border: none;
+        padding: 0.5rem;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    .mobile-menu-button:hover {
+        filter: brightness(1.1);
+    }
+
+    .logo-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    .mobile-login-button {
+        border: none;
+        background-color: #3BAFDA;
+        color: white;
+        padding: 0.3rem 0.5rem;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        width: 5rem;
+        margin-right: 1rem;
+    }
+
+    .mobile-login-button:hover {
+        filter: brightness(1.1);
+        animation: scale-up-center 0.3s;
+    }
+
+    .medications-list {
+        max-height: 60vh;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 70%;
+        transition: left 0.3s ease-in-out;
+        z-index: 10;
+    }
+
+    .user-profile img {
+        width: 35%;
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9;
+
+    }
+
+    .overlay.active {
+        display: block;
+    }
 }

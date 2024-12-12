@@ -144,6 +144,31 @@ body {
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
+.appointments-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-button {
+    flex: 1;
+    text-align: center;
+    background-color: #3BAFDA;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    cursor: pointer;
+}
+
+.action-button:hover {
+    filter: brightness(1.1);
+    animation: scale-up-center90 0.3s;
+}
+
+.action-button.secondary {
+    background-color: #044E54;
+}
 .appointments-list {
     flex: 1;
     overflow-y: auto;
@@ -168,30 +193,6 @@ body {
     animation: scale-up-center95 0.5s;
 }
 
-.appointments-actions {
-    display: flex;
-    gap: 1rem;
-}
-
-.action-button {
-    flex: 1;
-    text-align: center;
-    background-color: #3BAFDA;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 1rem 0.5rem;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    cursor: pointer;
-}
-.action-button:hover {
-    filter: brightness(1.1);
-    animation: scale-up-center90 0.3s;
-}
-
-.action-button.secondary {
-    background-color: #044E54;
-}
 
 .modal {
     display: none;
