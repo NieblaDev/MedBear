@@ -11,7 +11,6 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: white;
-    
 }
 
 .mobile-header{
@@ -153,7 +152,7 @@ body {
     border-color: #044E54;
     color:#044E54;
     filter: brightness(1.1);
-    animation: scale-up-center 0.3s;
+    animation: scale-up-center90 0.3s;
 }
 
 .profile p,
@@ -164,9 +163,6 @@ body {
 
 /*desktop small*/
 @media (width < 1200px) {
-    .sidebar {
-        width: 27%;
-    }
     .profiles-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -179,9 +175,6 @@ body {
 
 /*tablet*/
 @media (width < 992px) {
-    .sidebar {
-        width: 25%;
-    }
     .profiles-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -236,7 +229,7 @@ body {
 
     .mobile-login-button:hover {
         filter: brightness(1.1);
-        animation: scale-up-center 0.3s;
+        animation: scale-up-center90 0.3s;
     }
     
     .sidebar {

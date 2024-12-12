@@ -1,46 +1,31 @@
-/* Ajuste Global */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #cacaca;
-    height: 100vh;
 }
 
-/* Contenedor Principal */
 .container {
     display: flex;
-    width: 99vw; /* Aumenta el ancho */
-    height: 99vh; /* Aumenta el alto */
+    width: 100vw;
+    height: 100vh;
     background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-/* Panel de Login */
-.login-panel {
-    flex: 1;
-    padding: 40px; /* Aumenta el padding */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.5); /* Añade sombra interna */
 }
 
 .back-button {
-    align-self: flex-start;
-    margin-left: 5%;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
     background-color: #3BAFDA;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     cursor: pointer;
-    margin-bottom: 20px;
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
+    z-index: 100;
+    animation: bounce-subtle 0.7s infinite;
 }
 
 .back-button:hover {
@@ -48,63 +33,6 @@ body {
     animation: scale-up-center 0.3s;
 }
 
-h1 {
-    color: #333;
-    margin-bottom: 30px;
-    font-size: clamp(20px, 2vw, 30px); /* Tamaño dinámico */
-    text-align: center; /* Centrar el texto */
-    width: 100%; /* Asegurar que ocupe todo el ancho del contenedor */
-}
-
-.input-group {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-input {
-    width: 100%;
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
-    padding: 15px; /* Aumenta el padding */
-    border: 1px solid #CCC;
-    border-radius: 5px;
-}
-
-.login-button {
-    width: 100%;
-    background-color: #3BAFDA;
-    color: white;
-    padding: 15px; /* Aumenta el padding */
-    align-self: center;
-    border: none;
-    border-radius: 5px;
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
-    cursor: pointer;
-}
-
-.login-button:hover {
-    filter: brightness(1.1);
-    animation: scale-up-center 0.3s;
-}
-
-.social-login-text {
-    margin: 30px 0 15px;
-    color: #666;
-    font-size: clamp(14px, 2vw, 24px); /* Tamaño dinámico */
-}
-
-.social-icons img {
-    width: 40px; /* Aumenta el tamaño */
-    height: 40px;
-    margin: 0 10px;
-    border: 1px solid #ffffff;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.social-icons img:hover {
-    animation: scale-up-center 0.3s;
-}
-
-/* Panel de Branding */
 .branding-panel {
     flex: 1;
     background-color: #044E54;
@@ -117,7 +45,90 @@ input {
 }
 
 .logo {
-    height: 75%;/*  Aumenta el tamaño */
-    width: auto; 
-    margin-bottom: 30px;
+    width: 50%;
+    padding: 1rem;
+}
+
+.login-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #333;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    text-align: center;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 0.5rem;
+}
+
+.login-button {
+    display: box;
+    width: 100%;
+    padding: 1rem;
+    background-color: #3BAFDA;
+    color: white;
+    align-self: center;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Tamaño dinámico */
+    cursor: pointer;
+}
+
+.login-button:hover {
+    filter: brightness(1.1);
+    animation: scale-up-center90 0.3s;
+}
+
+.social-login-text {
+    color: #666;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.social-icons img {
+    width: 2.5rem; /* Aumenta el tamaño */
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.social-icons img:hover {
+    animation: scale-up-center90 0.3s;
+}
+
+@media (width < 576px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .branding-panel {
+        flex: 0;
+    }
+
+    .logo {
+        width: 30%;
+    }
 }

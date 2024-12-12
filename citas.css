@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     align-items: center; 
     justify-content: space-between;
-    width: 25%;
+    width: 30%;
     background-color: #044E54;
     color: white;
     overflow-y: auto;
@@ -97,7 +97,7 @@ body {
 }
 
 .user-profile img {
-    width: 50%;
+    width: 10rem;
     height: auto;
     border-radius: 50%;
     object-fit: cover;
@@ -265,6 +265,25 @@ body {
     gap: 1rem;
 }
 
+/*desktop small*/
+@media (width <= 1440px) {
+    .menu-item {
+        font-size: clamp(0.8rem, 2vw, 1.2rem);
+    }
+    .user-profile img {
+        width: 8rem;
+    }
+}
+
+/*tablet*/
+@media (width <= 992px) {
+    .menu-item {
+        font-size: clamp(0.8rem, 2vw, 1.2rem);
+    }
+    .user-profile img {
+        width: 6rem;
+    }
+}
 /*mobile*/
 @media (width < 576px) {
     .container {
