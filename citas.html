@@ -52,12 +52,16 @@
             </div>
             <button class="login-button">Cerrar Sesión</button>
         </aside>
-
+        
         <!-- Contenido Principal -->
         <main class="appointments">
             <div class="appointments-header">
                 <h2>Próximas Citas</h2>
                 <input type="text" placeholder="Buscar citas..." class="search-bar">
+            </div>
+            <div class="appointments-actions">
+                <button class="action-button " onclick="window.location.href = 'notready.html'">Agendar Nueva Cita</button>
+                <button class="action-button secondary" onclick="window.location.href = 'notready.html'">Ver Historial</button>
             </div>
             <div class="appointments-list">
                 <div class="appointment-card" onclick="openModal(this)">
@@ -92,10 +96,6 @@
                     <p4>10:30 hrs</p4>
                     <p5>13/10/2025<p5>
                 </div>
-            </div>
-            <div class="appointments-actions">
-                <button class="action-button " onclick="window.location.href = 'notready.html'">Agendar Nueva Cita</button>
-                <button class="action-button secondary" onclick="window.location.href = 'notready.html'">Ver Historial</button>
             </div>
         </main>
         <!-- Modal -->
@@ -162,7 +162,7 @@
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
     <script src="citas.js"></script>
 </body>
 
