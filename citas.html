@@ -14,7 +14,16 @@
 
 <body>
     <div class="container">
+        <!-- Barra mobiles -->
+        <div class="mobile-header">
+            <button class="mobile-menu-button">☰</button>
+            <img src="images/logo-horizontal.png" alt="MedBear Logo" class="logo-mobile">
+            <button class="mobile-login-button">Iniciar Sesión</button>
+        </div>
+        
+        <div class="overlay"></div>
         <!-- Barra Lateral -->
+
         <aside class="sidebar">
             <div class="logo-section">
                 <img src="images/logo-horizontal.png" alt="MedBear Logo" class="logo">
@@ -41,7 +50,7 @@
                 <img id="user-profile-image" alt="Foto de Perfil">
                 <p2 id="user-email"></p2>
             </div>
-            <button class="logout-button">Cerrar Sesión</button>
+            <button class="login-button">Cerrar Sesión</button>
         </aside>
 
         <!-- Contenido Principal -->
@@ -88,8 +97,10 @@
                 <button class="action-button " onclick="window.location.href = 'notready.html'">Agendar Nueva Cita</button>
                 <button class="action-button secondary" onclick="window.location.href = 'notready.html'">Ver Historial</button>
             </div>
-            <!-- Modal -->
-            <div id="modal" class="modal hidden">
+        </main>
+        <!-- Modal -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-body">
                 <div class="modal-content">
                     <h3 id="modal-header"> Información de consulta:</h3>
                     <table class="details-table">
@@ -150,7 +161,7 @@
                         <button class="action-button" onclick="archiveTable()">Archivar en Historial</button>
                     </div>
                 </div>
-        </main>
+            </div>
     </div>
     <script src="citas.js"></script>
 </body>

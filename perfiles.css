@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -12,6 +11,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: white;
+    
 }
 
 .mobile-header{
@@ -23,7 +23,7 @@ body {
     flex-direction: column;
     align-items: center; 
     justify-content: space-between;
-    width: 25%;
+    width: 30%;
     background-color: #044E54;
     color: white;
 }
@@ -84,7 +84,7 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    font-size: clamp(1rem, 2vw, 1.5rem); /* Tamaño dinámico */
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .login-button {
@@ -96,7 +96,7 @@ body {
     background-color: #3BAFDA;
     color: white;
     border: none;
-    font-size: clamp(1rem, 2vw, 1.5rem); /* Tamaño dinámico */
+    font-size: clamp(1rem, 2vw, 1.5rem);
     cursor: pointer;
 }
 
@@ -111,7 +111,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #F4F6F8;
+    background-color: white;
 }
 
 .profiles-header {
@@ -165,7 +165,7 @@ body {
 /*desktop small*/
 @media (width < 1200px) {
     .sidebar {
-        width: 30%;
+        width: 27%;
     }
     .profiles-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -180,7 +180,7 @@ body {
 /*tablet*/
 @media (width < 992px) {
     .sidebar {
-        width: 30%;
+        width: 25%;
     }
     .profiles-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -211,6 +211,7 @@ body {
         border: none;
         padding: 0.5rem;
         cursor: pointer;
+        font-size: 1rem;
         margin-left: 1rem;
     }
     .mobile-menu-button:hover {
