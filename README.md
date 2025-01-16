@@ -1,9 +1,9 @@
 # MEDBEAR
 Esta es una página web prototipo para un proyecto universitario:
-### MEDBEAR - Tu salud en orden
+### MEDBEAR - Tu salud en orden 🧸
 Es una idea de app web en la que los usuarios puedan registrar toda su información relacionada a la salud y citas médicas de forma personalizada y segura.
 
-La aplicación contaría con soporte para:
+**La aplicación contaría con soporte para:**
 - Permitir un registro de cuenta en la pagina web
 - Permitir la creación de varios perfiles dentro de una misma cuenta (tipo Netflix) para uso en grupos familiares
 - Registrar futuras citas médicas
@@ -15,5 +15,4 @@ Al ser un prototipo de la aplicación web, se limita principalmente a la represe
 Cuenta con diseño responsive para distintos tamaños de pantalla y también se adapta a funcionar en teléfonos móviles.
 
 
-El diseño es bastante bonito.
-
+Traté de hacerlo bonito, puedes ver la página [haciendo click aquí.](https://niebladev.github.io/MedBear/) 😎
